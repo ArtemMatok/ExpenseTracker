@@ -1,0 +1,31 @@
+﻿@{
+    List<Object> menuItems = new List<Object>();
+
+    menuItems.Add(new
+    {
+        text="Categories",
+        url="/Category",
+        //items = new List<object>()
+        //{
+        //    new{text = "Open"},
+        //    new{text = "Save"},
+        //    new{text = "Exit"},
+        //}
+        iconCss = "fa-solid fa-folder-closed",
+    });
+    menuItems.Add(new
+    {
+        text = "Transactions",
+        url = "/Transaction",
+       iconCss = "fa-solid fa-arrow-right-arrow-left"
+    });
+}
+
+
+<ejs-sidebar id="sidebar" width="290px">
+    <e-content-template>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+            <ejs-menu id="menu" items="menuItems" orientation="Vertical"></ejs-menu>
+        </div>
+    </e-content-template>
+</ejs-sidebar>
